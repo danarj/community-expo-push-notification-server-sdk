@@ -17,7 +17,7 @@ namespace ExpoCommunityNotificationServer.Client
     public abstract class BaseClient : IPushApiClient, IDisposable
     {
         private const string _expoHost = "https://exp.host";
-        private const string _sendPushPath = "/--/api/v2/push/send";
+        private const string _sendPushPath = "/--/api/v2/push/send?useFcmV1=true";
         private const string _getReceiptsPath = "/--/api/v2/push/getReceipts";
 
         private TimeSpan _retryDelay = TimeSpan.FromMilliseconds(500);
